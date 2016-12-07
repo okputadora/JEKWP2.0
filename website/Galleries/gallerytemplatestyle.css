@@ -1,0 +1,177 @@
+*{
+  /*border: 1px solid red !important;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Megrim', cursive;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*hide mobile features*/
+#mobile-menu, #menu-container{
+  display: none;
+  border: none;
+}
+
+.fluid-container{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+html, body{
+  background-color: whitesmoke;
+}
+a{
+  text-decoration: none;
+  color: white;
+  /*margin-right: 20px;*/
+}
+
+/*HEADER*/
+.header{
+  flex-grow: 0;
+  flex-basis: 70px;
+  width: 100%;
+  position: absolute;
+  box-shadow: 0 0 20px black;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+}
+
+.header-btn{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#title{
+  font-weight: bolder;
+  font-size: 45px;
+  opacity: .7;
+  transition: .3s;
+  margin-top: 5px;
+}
+
+#title:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+#logo-wrap{
+  display: flex;
+  flex-direction: row;
+  padding-left: 8%;
+  height: 100px;
+  align-items: center;
+}
+
+#nav-menu{
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 2s;
+  height: 100px;
+}
+
+#active{
+  opacity: 1;
+  font-weight: bold;
+}
+
+.header:hover #nav-menu{
+  display: flex;
+}
+
+.header:hover #logo-wrap{
+  display: none;
+}
+h1{
+  font-size: 45px;
+  margin-right: 20px;
+  margin-bottom: -10px;
+}
+h2{
+  align-self: flex-end;
+}
+.header-btn:hover{
+  font-weight: bold;
+}
+
+/*children of nav-menu i.e. drop down containers*/
+#nav-menu > div{
+  position: relative;
+  display: inline-block;
+  margin-bottom: -20px;
+}
+
+.content{
+  display: none;
+  position: absolute;
+  background-color: black;
+  opacity: .7;
+  font-size: 30px;
+  width: 254px;
+  padding-top: 25px;
+}
+
+#gal:hover #gal-content, #shop:hover #shop-content,
+#events:hover #events-content, #contact:hover #contact-content{
+  display:flex;
+  flex-direction: column;
+}
+
+.content > a{
+  padding: 10px;
+  border-bottom: thin solid white;
+}
+#nav-menu > div > div > a:hover, #nav-menu > div > div >
+a:hover i{
+  font-weight: bold;
+  opacity: 1;
+}
+
+#gals-title{
+  margin-top: 140px;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.border{
+  border: 1px solid black;
+  width: 75%;
+  align-self: center;
+}
+
+#current-img{
+  margin-top: 40px;
+  display: flex;
+  width: 40%;
+  align-self: center;
+  flex-direction: column;
+  align-items: flex-start;;
+  justify-content: flex-start;
+}
+
+#img{
+  align-self: center;
+}
+
+#photo-ticker{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  align-self: center;
+  width: 75%;
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+}

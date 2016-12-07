@@ -1,0 +1,381 @@
+
+
+*{
+  /*border: 1px solid red !important;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Megrim', cursive;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*hide mobile features*/
+#mobile-menu, #menu-container{
+  display: none;
+  border: none;
+}
+
+.fluid-container{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  width: 100%;
+  padding-bottom: 400px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  /*margin-right: 20px;*/
+}
+
+.header{
+  flex-grow: 0;
+  flex-basis: 70px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 20px black;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+}
+
+.header-btn{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#title{
+  font-weight: bolder;
+  font-size: 45px;
+  opacity: .7;
+  transition: .7s;
+}
+
+#title:hover{
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+#logo-wrap{
+  display: flex;
+  flex-direction: row;
+  padding-left: 8%;
+  height: 100px;
+  align-items: center;
+}
+
+#nav-menu{
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 2s;
+  height: 100px;
+}
+
+.header:hover #nav-menu{
+  display: flex;
+}
+
+.header:hover #logo-wrap{
+  display: none;
+}
+h1{
+  font-size: 45px;
+  margin-right: 20px;
+  margin-bottom: -10px;
+}
+
+.header-btn:hover{
+  font-weight: bold;
+}
+
+/*children of nav-menu i.e. drop down containers*/
+#nav-menu > div{
+  position: relative;
+  display: inline-block;
+  margin-bottom: -20px;
+}
+
+.content{
+  display: none;
+  position: absolute;
+  background-color: black;
+  opacity: .7;
+  font-size: 30px;
+  width: 254px;
+  padding-top: 25px;
+}
+
+#gal:hover #gal-content, #shop:hover #shop-content,
+#events:hover #events-content, #contact:hover #contact-content{
+  display:flex;
+  flex-direction: column;
+}
+
+.content > a{
+  padding: 10px;
+  border-bottom: thin solid white;
+}
+#nav-menu > div > div > a:hover, #nav-menu > div > div >
+a:hover i{
+  font-weight: bold;
+  opacity: 1;
+}
+
+.side-nav{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 1000px;
+  justify-content: center;
+  margin-left: 50px;
+}
+button:focus,
+button.active{
+  box-shadow: none;
+  outline: 0;
+  background-image: none;
+}
+.side-nav-container{
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  border-radius: 10px;
+
+}
+
+.side-nav-container > button{
+  margin: 5px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  border-radius: 10px;
+  background-color: darkgrey;
+}
+
+.side-nav-container > button:hover{
+  transition: ease-in .3s;
+  opacity: .7;
+}
+
+/*Colors for side nav-bar*/
+.msg:hover{background-color: #66D182;}
+.mail:hover{background-color: #DA4A38;}
+.fb:hover{background-color: darkslateblue;}
+.dev:hover{background-color: black;}
+
+
+.row{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 1000px;
+}
+
+#first{
+  justify-content: flex-start;
+}
+
+.contact-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 30px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+#contact-form{
+  height: 800px;
+}
+
+.contact-header{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 20px black;
+}
+
+.contact-header > h2{
+  background-color: black;
+  color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 25px;
+}
+
+label{
+  margin-left: 10px;
+  font-weight: bolder;
+}
+input{
+  background-color: whitesmoke;
+  margin: 5px 10px 10px 10px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-family: monospace;
+
+}
+textarea{
+  margin: 5px 10px 10px 10px;
+  height: 470px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: monospace;
+
+}
+
+#submit{
+  color: white;
+  background-color: #66D182;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: Megrim;
+  box-shadow: 0 0 10px black;
+  margin-top: 10px;
+}
+#submit:hover{
+  cursor: pointer;
+}
+#facebook, #mailing, #developer{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  align-self: center;
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid black;
+}
+
+#facebook > a{
+  color: darkslateblue;
+  font-size: 100px;
+}
+#mailing{
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid black;
+}
+#mailing > i{
+  margin: 10px 0 10px 0;
+}
+
+#mailing > p{
+  font-size: 20px;
+  margin: 5px;
+}
+
+#developer-contact{
+  display: flex;
+  flex-direction: row;
+}
+
+#developer-contact > a{
+  color: black;
+  margin: 10px;
+}
+
+
+/*Mobile Friendly*/
+@media only screen and (max-width: 800px) {
+  #logo-wrap > h1{
+    font-size: 25px;
+    padding: 0;
+  }
+  #mobile-menu{
+    display: inline;
+    padding-right: 25px;
+    font-size: 30px;
+  }
+  /*Remove nav-menu on click*/
+  .header:hover #logo-wrap{
+    display: flex;
+  }
+  .header:hover #nav-menu{
+    display: none;
+  }
+  /*Reformat nav-menu and drp-dwn menus*/
+  .header-btn{
+    font-size: 25px;
+  }
+  /*Hide the drop down menus in mobile mode and make them
+  appear in the cetner of the slideshow instead (this will
+  be done in the js)*/
+  #gal:hover #gal-content, #shop:hover #shop-content,
+  #events:hover #events-content, #contact:hover #contact-content{
+    display:none;
+  }
+  #menu-container{
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    z-index: 2000;
+    font-size: 25px;
+    color: white;
+    height: auto;
+    width: auto;
+    background-color: black;
+    opacity: .6;
+    /*border: 1px solid white;*/
+  }
+
+  .line{
+    margin: 10px;
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+  }
+
+  .contact-box, #contact-form, #facebook, #mailing, #developer{
+    height: 400px;
+    width: 300px;
+    margin: 0px;
+
+}
+  .contact-header{
+    height:40px;
+  }
+  .contact-header > h2, #submit{
+      font-size: 25px;
+  }
+  #submit{
+    height:40px;
+    font-size: 20px;
+  }
+
+  textarea{
+    height: 200px;
+    font-size: 20px;
+  }
+  }
+}
